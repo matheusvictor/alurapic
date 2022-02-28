@@ -9,10 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  photos = [];
+  photos: Object[] = [];
 
   constructor(http: HttpClient) {
-    console.log(http);
+    const observable = http.get<Object[]>('http://localhost:3000/flavio/photosx');
+    observable.subscribe(
+      photos => this.photos = photos,
+      error => console.log(error.message)
+    );
   }
 
 }
