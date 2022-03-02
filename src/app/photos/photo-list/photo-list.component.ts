@@ -1,3 +1,4 @@
+import { PhotoModel } from './../photo/photo.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PhotoService } from '../photo/photo.service';
@@ -9,7 +10,7 @@ import { PhotoService } from '../photo/photo.service';
 })
 export class PhotoListComponent implements OnInit {
 
-  photos: any[] = [];
+  photos: PhotoModel[] = [];
 
   constructor(
     private photoService: PhotoService,

@@ -11,7 +11,7 @@ export class PhotoService {
 
   listFromUser(userName: string) {
     return this.http
-      .get<PhotoModel[]>(BASE_URL + '/' + userName + '  /photos');
+      .get<PhotoModel[]>(BASE_URL + '/' + userName + '/photos');
   }
 
 }
