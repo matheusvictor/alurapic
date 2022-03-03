@@ -1,0 +1,14 @@
+<div class="text-center mt-3 mb-3">
+  <form>
+    <i aria-hidden="true" class="fa fa-search mr-3"></i>
+    <input
+      class="rounded"
+      type="search"
+      placeholder="search..."
+      autofocus
+      (keyup)="filter = debounce.next($event.target.value)"
+      [value]="value"
+    />
+    <!-- Para o evento keyup, será avaliada a expressão passada -->
+  </form>
+</div>
